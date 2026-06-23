@@ -23,7 +23,7 @@ See more details in our [announcement blog here](https://developers.googleblog.c
 All users have access to most popular LLMs via the `google-colab-ai` Python library, and paid users have access to a wider selection of models. For more details, refer to the [getting started with google colab ai](https://colab.research.google.com/github/googlecolab/colabtools/blob/main/notebooks/Getting_started_with_google_colab_ai.ipynb).
 """
 
-from google.colab import ai
+
 response = ai.generate_text("What is the capital of France?")
 
 """## Explore the Gemini API
