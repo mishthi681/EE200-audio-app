@@ -278,7 +278,7 @@ build_database_current_folder()
 
 # Note: Call plot_spectrogram_and_peaks("A Hard Day's Night.mp3") here to generate your report images.
 
-!pip install streamlit librosa
+
 
 import streamlit as st
 import numpy as np
@@ -415,7 +415,5 @@ elif mode == "Batch Mode":
 # import librosa
 # # ... [rest of your app code below] ...
 
-!curl ipv4.icanhazip.com
 
-!npm install localtunnel
-!streamlit run app.py & npx localtunnel --port 8501
+
