@@ -24,7 +24,7 @@ All users have access to most popular LLMs via the `google-colab-ai` Python libr
 """
 
 
-response = ai.generate_text("What is the capital of France?")
+
 
 """## Explore the Gemini API
 The Gemini API gives you access to Gemini models created by Google DeepMind. Gemini models are built from the ground up to be multimodal, so you can reason seamlessly across text, images, code, and audio.
