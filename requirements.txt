@@ -4,3 +4,4 @@ librosa
 scipy
 matplotlib
 pandas
+ffmpeg
