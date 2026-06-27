@@ -9,7 +9,7 @@ import pickle
 import gzip
 import os
 
-# --- Core Audio Fingerprinting Functions ---
+#  Core Audio Fingerprinting Functions 
 def get_peaks(S_db):
     local_max = maximum_filter(S_db, size=15) == S_db
     threshold = np.max(S_db) - 30
@@ -57,11 +57,11 @@ def match_query(q_hashes, db_dict):
 
     return best_match, max_score, best_offsets
 
-# --- Streamlit UI ---
+#  Streamlit UI 
 st.set_page_config(page_title="Sonic Signatures", layout="wide", page_icon="🎵")
 st.title("🎵 EE200: Sonic Signatures")
 
-# --- Load Pre-Computed Compressed Database ---
+#  Load Pre-Computed Compressed Database 
 @st.cache_data
 def load_database():
     try:
@@ -73,15 +73,15 @@ def load_database():
 db = load_database()
 
 if db is None:
-    st.error("🚨 CRITICAL ERROR: `audio_database.pkl.gz` not found. Please ensure you uploaded it to GitHub.")
+    st.error(" CRITICAL ERROR: `audio_database.pkl.gz` not found. Please ensure you uploaded it to GitHub.")
     st.stop()
 
 st.success(f"🗄️ Database successfully loaded online with {len(db)} indexed tracks.")
 st.divider()
 
-# ==========================================
+
 # IDENTIFICATION UI
-# ==========================================
+
 st.header("🔍 Identify Audio")
 mode = st.radio("Select Mode:", ("Single Clip (Visual)", "Batch Process (CSV Export)"), horizontal=True)
 st.write("") 
