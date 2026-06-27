@@ -76,7 +76,7 @@ if db is None:
     st.error(" CRITICAL ERROR: `audio_database.pkl.gz` not found. Please ensure you uploaded it to GitHub.")
     st.stop()
 
-st.success(f"🗄️ Database successfully loaded online with {len(db)} indexed tracks.")
+st.success(f" Database successfully loaded online with {len(db)} indexed tracks.")
 st.divider()
 
 
@@ -97,7 +97,7 @@ with st.container(border=True):
                     match_name, score, offsets = match_query(q_hashes, db)
                     
                     if match_name != "none":
-                        st.success(f"🎶 **Match Found:** {match_name} (Confidence Score: {score})")
+                        st.success(f" **Match Found:** {match_name} (Confidence Score: {score})")
                         
                         col1, col2 = st.columns(2)
                         with col1:
